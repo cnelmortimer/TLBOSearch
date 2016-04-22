@@ -16,7 +16,7 @@ The module 'TLBOSearch' requires as INPUT parameters:
 
 3. The number of cycles to execute ('numGenerations'). It is a plain number.
 
-4. A matrix with the bounds/limits of the search-space at every dimension ('bounds'). It is a Mx2 matrix where M is the number of optimization variables and at every row 'i' the lower bound is in the first column while the upper bound is in the second column in reference to the dimension 'i' of the search-space
+4. A matrix with the bounds/limits of the search-space at every dimension ('bounds'). It is a Mx2 matrix where M is the number of optimization variables and at every row 'i' the lower bound is in the first column while the upper bound is in the second column in reference to the dimension 'i' of the search-space.
 
 The module 'TLBOSearch' returns as OUTPUT parameters:
 
@@ -27,8 +27,9 @@ The module 'TLBOSearch' returns as OUTPUT parameters:
 ## Example call
 In order to launch the optimization procedure to solve the 'Sphere' test problem with 2 real variables in ranges [-100, 100] by using a population of 20 students along 30 cycles this is the call that could be used:
 
-_[bestSolution, FEVAL] = TLBOSearch(@Sphere, 20, 30, [-100 100; -100 100]);_
-
+```Matlab
+[bestSolution, FEVAL] = TLBOSearch(@Sphere, 20, 30, [-100 100; -100 100]);
+```
 The results will be saved in the variables 'bestSolution' (the solution found by TLBO) and 'FEVAL' (the value of the solution found according to the objective function)
 
 ## License
